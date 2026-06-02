@@ -12,7 +12,7 @@ module.exports = defineConfig({
   reporter: 'html',
 
   use: {
-    browserName: 'firefox',
+    browserName: 'chromium',
     
   },
 });

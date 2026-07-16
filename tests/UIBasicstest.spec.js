@@ -9,7 +9,6 @@ test('Browser context validating Error Login', async ({ browser }) => {
 
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
     console.log(await page.title());
-
     const username = page.locator('#username');
     const signinbtn = page.locator('#signInBtn');
     const cardTitles = page.locator('.card-body a');

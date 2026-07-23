@@ -1,12 +1,12 @@
 const { test, expect } = require('@playwright/test'); 
 
-test.only('Client App end to end test 2', async ({ page }) => {
+test('Client App end to end test 2', async ({ page }) => {
    const email = "amit.tiparadi1@gmail.com";
    const productName = 'iphone 13 pro';
    const products = page.locator(".card-body");
    await page.goto("https://rahulshettyacademy.com/client");
    await page.getByPlaceholder("email@example.com").fill(email);
-   await page.getByPlaceholder("enter your passsword").fill("Amit@1234");
+   await page.getByPlaceholder("enter your passsword").fill("amitsan785");
    await page.getByRole('button', {name : "Login"}).click();
    await page.waitForLoadState('networkidle');
    await page.locator(".card-body b").first().waitFor();

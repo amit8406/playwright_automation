@@ -1,14 +1,16 @@
 const { test, expect } = require('@playwright/test'); 
-test('@Web Client App login', async ({ page }) => {
+test('@Web Event App login', async ({ page }) => {
    //js file- Login js, DashboardPage
-   const email = "anshika@gmail.com";
-   const productName = 'zara coat 3';
-   const products = page.locator(".card-body");
-   await page.goto("https://rahulshettyacademy.com/client");
-   await page.locator("#userEmail").fill("amit.tiparadi1@gmail.com");
-   await page.locator("#userPassword").type("Amit@1234");
-   await page.locator("[value='Login']").click();
+   const email = "amit.tiparadi1@gmail.com";
+   //const productName = 'zara coat 3';
+   //const products = page.locator(".card-body");
+   await page.goto("https://eventhub.rahulshettyacademy.com/login");
+   await page.getByPlaceholder("you@email.com").fill("amit.tiparadi1@gmail.com");
+   await page.getByLabel("Password").type("Amitsan@785");
+   await page.locator("#login-btn").click();
    await page.waitForLoadState('networkidle');
+   await expect(page.getByText("Browse Events →")).toBeVisible();
+   // const bool= await page.locator("h3:has-text('iphone 13 pro')").isVisible();
   // await page.locator(".card-body b").first().waitFor();
    const titles = await page.locator(".card-body b").allTextContents();
    console.log(titles); 

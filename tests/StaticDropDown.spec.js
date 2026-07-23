@@ -23,7 +23,7 @@ test('Check DropDown Test', async ({page})=>{
     //await page.pause();
 });
 
-test.only('Child window handling', async ({browser})=>{
+test('Child window handling', async ({browser})=>{
     const context =  await browser.newContext();
     const page = await context.newPage();
     const userName = page.locator("#username");

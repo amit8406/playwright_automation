@@ -4,6 +4,8 @@ test('@Web Event App login', async ({ page }) => {
    //js file- Login js, DashboardPage
    const eventTitle = `Test Event ${Date.now()}`;
    const email = "amit.tiparadi1@gmail.com";
+   const allEvents = page.locator("#event-card");
+   const BASE_URL = "https://eventhub.rahulshettyacademy.com";
    //const productName = 'zara coat 3';
    //const products = page.locator(".card-body");
    await page.goto("https://eventhub.rahulshettyacademy.com/login");
@@ -46,11 +48,52 @@ test('@Web Event App login', async ({ page }) => {
          console.log(seatText);
          seatsBeforeBooking = parseInt(seatText , 10);
          console.log("Seats before Booking: ",seatsBeforeBooking);
+         await card.getByTestId("book-now-btn").click();
+         break;
+      }
+   }
+   await page.waitForLoadState('networkidle');
+   const lc = await page.locator("#ticket-count").filter({hasText : '1'});
+   await expect(lc).toBeVisible();
+   await page.getByLabel("Full Name").fill("Zack Crewley");
+   await page.locator("#customer-email").fill("abc@gmail.com");
+   await page.getByPlaceholder("+91 98765 43210").fill("+91 8983561289");
+   //await page.locator(".confirm-booking-btn").click();
+   await page.getByRole('button', { name: 'Confirm Booking' }).click();
+   await page.waitForLoadState('networkidle');
+   await expect(page.locator(".booking-ref")).toBeVisible();
+   const refText = (await page.locator(".booking-ref").innerText()).trim();
+   console.log("Booking Reference:",refText);
+   await page.getByRole('button', { name: 'View My Bookings' }).click();
+   await page.waitForLoadState('networkidle');
+   await expect(page).toHaveURL(`${BASE_URL}/bookings`);
+   //await page.getByText("✓Event created!")
+   const bookingCard = await page.locator("#booking-card").filter({has : page.locator(".booking-ref"), hasText : refText});
+   await expect(bookingCard).toBeVisible();
+   await expect(bookingCard).toContainText(eventTitle);
+   await page.locator("#nav-events").click();
+   //await expect(eventCards.first()).toBeVisible({timeout: 10000});
+   await expect(eventCards.filter({ hasText: eventTitle }).first()).toBeVisible({ timeout: 5000 });
+   let seatsAfterBooking;
+   for (let j=0; j< totalc; j++)
+   {
+      const card = eventCards.nth(j);
+      const cardText = await card.textContent();
+      //const cardText = await eventCards.nth(i).textContent();
+      if(cardText && cardText.includes(eventTitle))
+      {
+         console.log("Event exist!!");
+         const seatText = await card.locator("span.text-emerald-600").innerText();
+         console.log(seatText);
+         seatsAfterBooking = parseInt(seatText , 10);
+         console.log("Seats after Booking: ",seatsAfterBooking);
+         //await expect(seatsAfterBooking === seatsBeforeBooking -1).toBeTruthy();
+         expect(seatsAfterBooking).toBe(seatsBeforeBooking - 1);
+         console.log("Ticket count is updated");
          break;
       }
    }
 
-   //await page.getByText("✓Event created!")
 })
 
 // test('Client App end to end test', async ({ page }) => {

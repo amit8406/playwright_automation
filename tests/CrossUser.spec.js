@@ -7,10 +7,10 @@ const { loginAs } = require('../utils/loginAs');
 const BASE_URL = "https://api.eventhub.rahulshettyacademy.com";
 const API_URL = BASE_URL + "/api";
 const USER_EMAIL = "amit.t@gmail.com";
-const USER_PASSWORD = "Amitsan785";
+const USER_PASSWORD = "*******";
 const GMAIL_USER = {
     email: "amit.tiparadi1@gmail.com",
-    password: "Amitsan@785"
+    password: "********"
 }
 //const loginPayLoad ={"email": "amit.t@gmail.com","password": "Amitsan785"};
 let token;

@@ -6,7 +6,7 @@ test('Screenshot Test',async ({page}) => {
 
 })
 
-test.only("@Field Screenshot Test", async ({page}) => {
+test("@Field Screenshot Test", async ({page}) => {
     await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
     await page.locator('#login').screenshot({path: 'field_screenshot.png'});
     await expect(page.locator('#login')).toBeVisible();

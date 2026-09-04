@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
+test.describe.configure({mode: 'parallel'});
 test('Browser context validating Error Login', async ({ browser }) => {
 
     // Create fresh context & page
@@ -33,7 +34,7 @@ test('Browser context validating Error Login', async ({ browser }) => {
 });
 
 
-test('Page Playwright Test', async ({ page }) => {
+test('@Web Page Playwright Test', async ({ page }) => {
 
     console.log("Starting test2");
     // ✅ Use built-in page fixture (no need for context/browser)

@@ -1,0 +1,8 @@
+Test Event 1788435180663
+9
+Event Found!!
+50 seats available
+Seats before Booking:  50
+Booking Reference: T-8MDXSC
+Seats after Booking:  49
+Ticket count is updated

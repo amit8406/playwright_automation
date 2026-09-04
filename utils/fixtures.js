@@ -10,7 +10,7 @@ exports.customtest = base.test.extend({
         const page = await context.newPage();
         await page.goto("https://rahulshettyacademy.com/client");
         await page.locator("#userEmail").fill("amit.tiparadi1@gmail.com");
-        await page.locator("#userPassword").type("amitsan785");
+        await page.locator("#userPassword").fill("amitsan785");
         await page.locator("[value='Login']").click();
         await page.waitForLoadState('networkidle');
         await use(page);

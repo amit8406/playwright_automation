@@ -1,0 +1,19 @@
+const base  = require('@playwright/test');
+
+exports.customtest = base.test.extend(
+    {
+        testDataForOrder:[
+        {
+            username: "amit.tiparadi1@gmail.com",
+            password: "amitsan785",
+            productName: "iphone 13 pro"
+        },
+        {
+            username: "amit.uxboost@gmail.com",
+            password: "$Acceltree@785",
+            productName: "ZARA COAT 3"
+        },
+
+    ]
+    }
+)

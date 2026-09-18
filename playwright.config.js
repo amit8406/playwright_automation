@@ -2,6 +2,8 @@ const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
+  testMatch: '**/*.spec.js',
+  retries: 2,
 
   timeout: 30 * 1000, //overall timeout for each test
 
@@ -9,11 +11,16 @@ module.exports = defineConfig({
     timeout: 5000,  //timeout for each expect assertion
   },
 
-  reporter: 'html',
+  reporter: [
+    ['html'],
+    ['list'],
+    ['allure-playwright']
+],
+      
 
   use: {
     browserName: 'chromium',
-    headless: true,
+    headless: false,
     screenshot : 'on',
     trace: 'on'
     

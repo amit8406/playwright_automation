@@ -1,3 +1,0 @@
-[ 'ADIDAS ORIGINAL', 'ZARA COAT 3', 'iphone 13 pro' ]
-Item clicked!
-OrderId:   | 6a995af6e7cd69710fbc0ec5 | 

@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test'); 
 const { futureDateValue } = require('../utils/dateUtils');
-test('@Web Event App login', async ({ page }) => {
+test('@webTests Event App login', async ({ page }) => {
    const eventTitle = `Test Event ${Date.now()}`;
    const email = "amit.tiparadi1@gmail.com";
    const allEvents = page.locator("#event-card");

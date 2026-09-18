@@ -1,0 +1,310 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "EventHub" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e9]: EventHub
+      - generic [ref=e10]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /
+        - link "Events" [active] [ref=e12] [cursor=pointer]:
+          - /url: /events
+        - link "My Bookings" [ref=e13] [cursor=pointer]:
+          - /url: /bookings
+        - link "API Docs" [ref=e14] [cursor=pointer]:
+          - /url: https://api.eventhub.rahulshettyacademy.com/api/docs
+        - button "Admin" [ref=e16] [cursor=pointer]:
+          - text: Admin
+          - img [ref=e17]
+        - generic [ref=e19]:
+          - generic "amit.tiparadi1@gmail.com" [ref=e20]
+          - button "Logout" [ref=e21] [cursor=pointer]
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - heading "Upcoming Events" [level=1] [ref=e25]
+        - paragraph [ref=e26]: Find your next unforgettable experience
+      - generic [ref=e28]:
+        - textbox "Search events, venues…" [ref=e30]
+        - combobox [ref=e32] [cursor=pointer]:
+          - option "All Categories" [selected]
+          - option "🎙 Conference"
+          - option "🎵 Concert"
+          - option "⚽ Sports"
+          - option "🛠 Workshop"
+          - option "🎉 Festival"
+        - combobox [ref=e34] [cursor=pointer]:
+          - option "All Cities" [selected]
+          - option "Mumbai"
+          - option "Bangalore"
+          - option "Delhi"
+          - option "Hyderabad"
+          - option "Chennai"
+          - option "Pune"
+      - generic [ref=e35]:
+        - img [ref=e36]
+        - generic [ref=e38]:
+          - text: Your sandbox holds up to
+          - strong [ref=e39]: 9 bookings
+          - text: and you can create up to
+          - strong [ref=e40]: 6 custom events
+          - text: . When either limit is reached, the oldest entry is automatically replaced.
+      - generic [ref=e41]:
+        - article [ref=e42]:
+          - generic [ref=e43]:
+            - img "Dilli Diwali Mela" [ref=e44]
+            - generic [ref=e46]: Festival
+            - generic [ref=e47]: Featured
+          - generic [ref=e48]:
+            - link "Dilli Diwali Mela" [ref=e49] [cursor=pointer]:
+              - /url: /events/3
+              - heading "Dilli Diwali Mela" [level=3] [ref=e50]
+            - generic [ref=e51]:
+              - generic [ref=e52]:
+                - img [ref=e53]
+                - generic [ref=e55]: Tue, 20 Oct
+              - generic [ref=e56]:
+                - img [ref=e57]
+                - generic [ref=e59]: Pragati Maidan Exhibition Grounds, Delhi
+            - generic [ref=e60]:
+              - generic [ref=e61]:
+                - paragraph [ref=e62]: $300
+                - generic [ref=e63]: 8 seats left!
+              - link "Book Now" [ref=e64] [cursor=pointer]:
+                - /url: /events/3
+        - article [ref=e65]:
+          - generic [ref=e66]:
+            - img "Hollywood Monsoon Night — Los Angeles" [ref=e67]
+            - generic [ref=e69]: Concert
+            - generic [ref=e70]: Featured
+          - generic [ref=e71]:
+            - link "Hollywood Monsoon Night — Los Angeles" [ref=e72] [cursor=pointer]:
+              - /url: /events/2
+              - heading "Hollywood Monsoon Night — Los Angeles" [level=3] [ref=e73]
+            - generic [ref=e74]:
+              - generic [ref=e75]:
+                - img [ref=e76]
+                - generic [ref=e78]: Sun, 12 Jul
+              - generic [ref=e79]:
+                - img [ref=e80]
+                - generic [ref=e82]: Dome, NSCI SVP Stadium, Worli, Los Angeles
+            - generic [ref=e83]:
+              - generic [ref=e84]:
+                - paragraph [ref=e85]: $2,500
+                - generic [ref=e86]: 8 seats left!
+              - link "Book Now" [ref=e87] [cursor=pointer]:
+                - /url: /events/2
+        - article [ref=e88]:
+          - generic [ref=e89]:
+            - img "World Tech Summit" [ref=e90]
+            - generic [ref=e92]: Conference
+            - generic [ref=e93]: Featured
+          - generic [ref=e94]:
+            - link "World Tech Summit" [ref=e95] [cursor=pointer]:
+              - /url: /events/1
+              - heading "World Tech Summit" [level=3] [ref=e96]
+            - generic [ref=e97]:
+              - generic [ref=e98]:
+                - img [ref=e99]
+                - generic [ref=e101]: Sat, 18 Apr
+              - generic [ref=e102]:
+                - img [ref=e103]
+                - generic [ref=e105]: Hyderabad, Hitech city, Hyderabad
+            - generic [ref=e106]:
+              - generic [ref=e107]:
+                - paragraph [ref=e108]: $1,500
+                - generic [ref=e109]: 8 seats left!
+              - link "Book Now" [ref=e110] [cursor=pointer]:
+                - /url: /events/1
+        - article [ref=e111]:
+          - generic [ref=e112]:
+            - img [ref=e114]
+            - generic [ref=e117]: Festival
+          - generic [ref=e118]:
+            - link "Test Event 1788529178417" [ref=e119] [cursor=pointer]:
+              - /url: /events/111355
+              - heading "Test Event 1788529178417" [level=3] [ref=e120]
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - img [ref=e123]
+                - generic [ref=e125]: Sat, 5 Sept
+              - generic [ref=e126]:
+                - img [ref=e127]
+                - generic [ref=e129]: Hutatma Smriti Mandir, Solapur
+            - generic [ref=e130]:
+              - generic [ref=e131]:
+                - paragraph [ref=e132]: $150
+                - generic [ref=e133]: 49 seats available
+              - link "Book Now" [ref=e134] [cursor=pointer]:
+                - /url: /events/111355
+        - article [ref=e135]:
+          - generic [ref=e136]:
+            - img [ref=e138]
+            - generic [ref=e141]: Festival
+          - generic [ref=e142]:
+            - link "Test Event 1788528756775" [ref=e143] [cursor=pointer]:
+              - /url: /events/111319
+              - heading "Test Event 1788528756775" [level=3] [ref=e144]
+            - generic [ref=e145]:
+              - generic [ref=e146]:
+                - img [ref=e147]
+                - generic [ref=e149]: Sat, 5 Sept
+              - generic [ref=e150]:
+                - img [ref=e151]
+                - generic [ref=e153]: Hutatma Smriti Mandir, Solapur
+            - generic [ref=e154]:
+              - generic [ref=e155]:
+                - paragraph [ref=e156]: $150
+                - generic [ref=e157]: 49 seats available
+              - link "Book Now" [ref=e158] [cursor=pointer]:
+                - /url: /events/111319
+        - article [ref=e159]:
+          - generic [ref=e160]:
+            - img [ref=e162]
+            - generic [ref=e165]: Festival
+          - generic [ref=e166]:
+            - link "Test Event 1788528692543" [ref=e167] [cursor=pointer]:
+              - /url: /events/111316
+              - heading "Test Event 1788528692543" [level=3] [ref=e168]
+            - generic [ref=e169]:
+              - generic [ref=e170]:
+                - img [ref=e171]
+                - generic [ref=e173]: Sat, 5 Sept
+              - generic [ref=e174]:
+                - img [ref=e175]
+                - generic [ref=e177]: Hutatma Smriti Mandir, Solapur
+            - generic [ref=e178]:
+              - generic [ref=e179]:
+                - paragraph [ref=e180]: $150
+                - generic [ref=e181]: 49 seats available
+              - link "Book Now" [ref=e182] [cursor=pointer]:
+                - /url: /events/111316
+        - article [ref=e183]:
+          - generic [ref=e184]:
+            - img [ref=e186]
+            - generic [ref=e189]: Festival
+          - generic [ref=e190]:
+            - link "Test Event 1788528470263" [ref=e191] [cursor=pointer]:
+              - /url: /events/111311
+              - heading "Test Event 1788528470263" [level=3] [ref=e192]
+            - generic [ref=e193]:
+              - generic [ref=e194]:
+                - img [ref=e195]
+                - generic [ref=e197]: Sat, 5 Sept
+              - generic [ref=e198]:
+                - img [ref=e199]
+                - generic [ref=e201]: Hutatma Smriti Mandir, Solapur
+            - generic [ref=e202]:
+              - generic [ref=e203]:
+                - paragraph [ref=e204]: $150
+                - generic [ref=e205]: 49 seats available
+              - link "Book Now" [ref=e206] [cursor=pointer]:
+                - /url: /events/111311
+        - article [ref=e207]:
+          - generic [ref=e208]:
+            - img "QA Summit 2026" [ref=e209]
+            - generic [ref=e211]: Conference
+          - generic [ref=e212]:
+            - link "QA Summit 2026" [ref=e213] [cursor=pointer]:
+              - /url: /events/111309
+              - heading "QA Summit 2026" [level=3] [ref=e214]
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - img [ref=e217]
+                - generic [ref=e219]: Tue, 15 Sept
+              - generic [ref=e220]:
+                - img [ref=e221]
+                - generic [ref=e223]: Bangalore International Centre, Bangalore
+            - generic [ref=e224]:
+              - generic [ref=e225]:
+                - paragraph [ref=e226]: $1,200
+                - generic [ref=e227]: 600 seats available
+              - link "Book Now" [ref=e228] [cursor=pointer]:
+                - /url: /events/111309
+        - article [ref=e229]:
+          - generic [ref=e230]:
+            - img [ref=e232]
+            - generic [ref=e235]: Festival
+          - generic [ref=e236]:
+            - link "Test Event 1788525729252" [ref=e237] [cursor=pointer]:
+              - /url: /events/111259
+              - heading "Test Event 1788525729252" [level=3] [ref=e238]
+            - generic [ref=e239]:
+              - generic [ref=e240]:
+                - img [ref=e241]
+                - generic [ref=e243]: Sat, 5 Sept
+              - generic [ref=e244]:
+                - img [ref=e245]
+                - generic [ref=e247]: Hutatma Smriti Mandir, Solapur
+            - generic [ref=e248]:
+              - generic [ref=e249]:
+                - paragraph [ref=e250]: $150
+                - generic [ref=e251]: 49 seats available
+              - link "Book Now" [ref=e252] [cursor=pointer]:
+                - /url: /events/111259
+      - link "Add New Event" [ref=e254] [cursor=pointer]:
+        - /url: /admin/events
+        - button "Add New Event" [ref=e255]:
+          - img [ref=e256]
+          - text: Add New Event
+  - contentinfo [ref=e258]:
+    - generic [ref=e259]:
+      - generic [ref=e260]:
+        - generic [ref=e261]:
+          - heading "Rahul Shetty Academy" [level=3] [ref=e262]
+          - paragraph [ref=e263]: India's leading QA automation training academy — empowering engineers to build real-world testing skills.
+        - generic [ref=e264]:
+          - heading "Popular Courses" [level=3] [ref=e265]
+          - list [ref=e266]:
+            - listitem [ref=e267]:
+              - link "Selenium WebDriver with Java" [ref=e268] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=e269]:
+              - link "Playwright with JavaScript" [ref=e270] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=e271]:
+              - link "RestAssured API Testing" [ref=e272] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=e273]:
+              - link "Cypress End-to-End Testing" [ref=e274] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+            - listitem [ref=e275]:
+              - link "Appium Mobile Testing" [ref=e276] [cursor=pointer]:
+                - /url: https://rahulshettyacademy.com
+        - generic [ref=e277]:
+          - heading "QA Job Hiring Platform" [level=3] [ref=e278]
+          - paragraph [ref=e279]: Get hired faster — take skill assessments trusted by top QA employers worldwide.
+          - link "techsmarthire.com →" [ref=e280] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+        - generic [ref=e281]:
+          - heading "EventHub Practice App" [level=3] [ref=e282]
+          - list [ref=e283]:
+            - listitem [ref=e284]:
+              - link "Browse Events" [ref=e285] [cursor=pointer]:
+                - /url: /events
+            - listitem [ref=e286]:
+              - link "My Bookings" [ref=e287] [cursor=pointer]:
+                - /url: /bookings
+            - listitem [ref=e288]:
+              - link "Manage Events" [ref=e289] [cursor=pointer]:
+                - /url: /admin/events
+            - listitem [ref=e290]:
+              - link "API Documentation" [ref=e291] [cursor=pointer]:
+                - /url: https://api.eventhub.rahulshettyacademy.com/api/docs
+      - generic [ref=e292]:
+        - paragraph [ref=e293]: © 2026 Rahul Shetty Academy. All rights reserved.
+        - generic [ref=e294]:
+          - link "rahulshettyacademy.com →" [ref=e295] [cursor=pointer]:
+            - /url: https://rahulshettyacademy.com
+          - link "techsmarthire.com →" [ref=e296] [cursor=pointer]:
+            - /url: https://techsmarthire.com
+  - generic [ref=e298]:
+    - generic [ref=e300]: ✓
+    - paragraph [ref=e301]: Event created!
+    - button "Dismiss" [ref=e302] [cursor=pointer]: ×
+  - alert [ref=e303]
+```

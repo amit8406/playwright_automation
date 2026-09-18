@@ -4,20 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test WebAPIPart1.spec.js --headed"
+    "test": "npx playwright test",
+    "webTests": "npx playwright test --grep @Web",
+    "APITests": "npx playwright test --grep @API",
+    "CucumberRegression": "cucumber-js --tags \"@Regression\" --retry 1 --exit --format html:cucumber-report.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@azure/identity": "^4.13.3",
+    "@azure/playwright": "^1.1.6",
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.5.0",
     "allure": "^3.16.0",
     "allure-commandline": "^2.43.0",
-    "allure-playwright": "^3.11.1"
+    "allure-playwright": "^3.11.1",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^13.2.1",
     "exceljs": "^4.4.0"
   }
 }

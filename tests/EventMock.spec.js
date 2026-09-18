@@ -26,7 +26,7 @@ const FOUR_EVENTS_RESPONSE = {
 
 };
 
-test('Mock Events API', async ({ page }) => {
+test('@APITests Mock Events API', async ({ page }) => {
 
     await page.route('**/api/events**', async route => {
         await route.fulfill({
@@ -46,7 +46,7 @@ test('Mock Events API', async ({ page }) => {
     await expect(banner).toContainText('9 bookings');
 });
 
-test('Mock Events API with 4 events', async ({ page }) => {
+test('@APITests Mock Events API with 4 events', async ({ page }) => {
     
     await page.route('**/api/events**', async route => {
         await route.fulfill({

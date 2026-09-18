@@ -17,7 +17,7 @@ class DashboardPage
            const count = await this.products.count();
            for(let i =0; i< count; ++i)
            {
-              if(await this.products.nth(i).locator("b").textContent()=== productName)
+              if((await this.products.nth(i).locator("b").textContent())?.trim().toLowerCase()=== productName.trim().toLowerCase())
               {
                  //await products.nth(i).locator("text= Add To Cart").click();
                  await this.products.nth(i).locator("text= Add To Cart").click();

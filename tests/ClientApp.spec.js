@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test'); 
-test('@Web Client App login', async ({ page }) => {
+test('@webTests Client App login', async ({ page }) => {
    //js file- Login js, DashboardPage
    const email = "anshika@gmail.com";
    const productName = 'zara coat 3';
@@ -15,7 +15,7 @@ test('@Web Client App login', async ({ page }) => {
  
 })
 
-test('Client App end to end test', async ({ page }) => {
+test('@webTests Client App end to end test', async ({ page }) => {
    const email = "amit.tiparadi1@gmail.com";
    const productName = 'iphone 13 pro';
    const products = page.locator(".card-body");

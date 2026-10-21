@@ -5,6 +5,7 @@ class DashboardPage
         this.page = page;
         this.products = page.locator(".card-body");
         this.productsText = page.locator(".card-body b");
+        this.practiceProducts = page.getByRole('link', { name: /iphone X/i });
         //this.cart =  page.locator("[routerlink*='cart']");
         this.cart = page.getByRole('button', { name: /Cart/ }).first();
         this.orders = page.locator("button[routerlink*='myorders']");
@@ -35,6 +36,11 @@ class DashboardPage
     async navigateToCart()
     {
         await this.cart.click();
+    }
+
+    product(productName)
+    {
+        return this.practiceProducts.filter({ hasText: new RegExp(productName, 'i') });
     }
 
 }

@@ -28,11 +28,16 @@ let user : {name:string,age:number, location:string} = {name:"Bob",age:34,locati
 
 user.location = "Solapur";
 
-const {test, expect} = require('@playwright/test');
+
 class CartPage
 {
-    page: Page;
-    constructor(page)
+    page:Page;
+    cartProducts: Locator;
+    productsText: Locator;
+    cart: Locator;
+    orders: Locator;
+    checkoutBtn: Locator;
+    constructor(page:Page)
     {
         this.page = page;
         this.cartProducts = page.locator("div li").first();
@@ -42,7 +47,7 @@ class CartPage
         this.checkoutBtn = page.locator("text=Checkout");
     }
 
-    async VerifyProductIsDisplayed(productName)
+    async VerifyProductIsDisplayed(productName: string)
     {
         await this.cartProducts.waitFor();
         const bool =await this.getProductLocator(productName).isVisible();
@@ -55,7 +60,7 @@ class CartPage
         await this.checkoutBtn.click();
     }
 
-    getProductLocator(productName)
+    getProductLocator(productName:string)
     {
         return this.page.locator("h3:has-text('"+productName+"')");
     }
